@@ -68,7 +68,7 @@ static const int LOOP_SLEEP_US = 1000000 / LOOP_SAMPLERATE;
 uint8_t loop_index = 0;
 
 Tape tape[6];
-const uint encoder_pins[7] = {10, 12, 14, 16, 18, 20, 28};
+const uint encoder_pins[7] = {10, 12, 14, 16, 18, 8, 20};
 const uint encoder_sm[7] = {1, 2, 3, 0, 1, 2, 3};
 int encoder_values[7] = {0, 0, 0, 0, 0, 0, 0};
 bool next_note_play = false;
@@ -77,7 +77,7 @@ int next_note_value = 0;
 int knob_values[3] = {0, 0, 0};
 bool knob_changed[3] = {false, false, false};
 
-const uint8_t button_pins[6] = {4, 5, 6, 7, 8, 9};
+const uint8_t button_pins[6] = {4, 5, 6, 7, 24, 29};
 uint8_t button_values[6] = {0, 0, 0, 0, 0, 0};
 
 static struct {
